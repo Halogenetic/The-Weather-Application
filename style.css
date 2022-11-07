@@ -17,7 +17,6 @@ body {
     padding: 2em;
     border-radius: 30px;
     width: 100%;
-    max-width: 420px;
     margin: 1em;
   }
   
@@ -27,7 +26,7 @@ body {
     justify-content: center;
   }
   
-  button {
+  input[type=submit] {
     margin: 0.5em;
     border-radius: 50%;
     border: none;
@@ -52,10 +51,16 @@ body {
     width: calc(100% - 100px);
   }
   
-  button:hover {
+  .button:hover {
     background: #7c7c7c6b;
   }
-  
+
+  /* .container {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+  }
+   */
   h1.temp {
     margin: 0;
     margin-bottom: 0.4em;
@@ -70,13 +75,7 @@ body {
     text-transform: capitalize;
     margin-left: 8px;
   }
-  
-  .weather.loading {
-    visibility: hidden;
-    max-height: 20px;
-    position: relative;
-  }
-  
+
   .weather.loading:after {
     visibility: visible;
     content: "Loading...";
@@ -84,4 +83,51 @@ body {
     position: absolute;
     top: 0;
     left: 20px;
+  }
+
+  h2 {
+    text-transform: capitalize;
+
+  }
+
+  .megacon, .megacon2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+  }
+
+.compare {
+    margin: 0.5em;
+    margin-top: 50px;
+    border-radius: 25%;
+    border: none;
+    height: 44px;
+    width: 100px;
+    outline: none;
+    background: #7c7c7c2b;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+  
+
+  #chart2 {
+    display: none;
+  }
+
+  .canvaz {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  #myChart, #chart2 {
+    border: 2px grey solid;
+    height: 150px;
+    width: 200px;
+    background-color: wheat;
   }
